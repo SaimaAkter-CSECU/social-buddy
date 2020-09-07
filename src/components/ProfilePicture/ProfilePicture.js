@@ -4,24 +4,25 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
         large: {
-            width: theme.spacing(7),
-            height: theme.spacing(7),
+            width: theme.spacing(12),
+            height: theme.spacing(12),
             alignContent: 'center',
         },
     })
 );
 
 const ProfilePicture = (props) => {
-    const {commentId} = props.commentId; 
+    const commentId = props.commentId; 
     const classes = useStyles(); 
     const [picture, setPicture] = useState({});
 
-    useEffect(()=>{
-        const url = `https://jsonplaceholder.typicode.com/photos/${commentId}`;
-        fetch(url)
-        .then(res => res.json())
-        .then(data => setPicture(data));
-    },[])
+        useEffect(()=>{
+            const url = `https://jsonplaceholder.typicode.com/photos/${commentId}`;
+            fetch(url)
+            .then(res => res.json())
+            .then(data => setPicture(data));
+        },[])
+    
 
     return (
         <div>

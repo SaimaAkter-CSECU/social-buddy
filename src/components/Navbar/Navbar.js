@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
+    header: {
+        background: 'black', 
+    },
     menuButton: {
         marginRight: theme.spacing(2),
     },
@@ -19,7 +22,7 @@ const Navbar = () => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <AppBar position="static">
+            <AppBar position="fixed" className={classes.header}>
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />

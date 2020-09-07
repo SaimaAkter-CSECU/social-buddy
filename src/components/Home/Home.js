@@ -5,9 +5,9 @@ import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(() => ({
     homeRoot: {
-      flexGrow: 1,
-      paddingTop: '30px', 
-      backgroundColor: '#f1f1f1', 
+        flexGrow: 1,
+        paddingTop: '90px', 
+        background: 'linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(244,226,110,1) 100%);',
     }
   })
 );

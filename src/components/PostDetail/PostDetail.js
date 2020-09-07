@@ -6,22 +6,24 @@ import Comments from '../Comments/Comments';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: '#f1f1f1',
+        background: 'linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(244,226,110,1) 100%)',
         padding: '30px 0px',
+        minHeight: '100vh', 
     },
     paper: {
       padding: theme.spacing(2),
       color: theme.palette.text.secondary,
-      backgroundColor: '#fff',
+      borderRadius: '20px', 
     },
     post: {
         padding: '20px 20px 40px 20px' , 
         borderBottom: '1px solid #ececec',
     },
     title: {
-        color: 'black', 
+        textTransform: 'capitalize', 
         textAlign: 'left', 
         margin: '10px 5px', 
+        color: 'indianred', 
     },
     body: {
         textAlign: 'left',

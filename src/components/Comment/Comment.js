@@ -36,16 +36,17 @@ const useStyles = makeStyles((theme) => ({
 
 const Comment = (props) => {
     const comment= props.comment; 
+    const id = props.comment.id; 
     const classes = useStyles(); 
 
     return (
         <div className={classes.commentbox}>
             <Paper className={classes.commentPaper}>
                 <Grid container wrap="nowrap" spacing={2}>
-                    <Grid item md={1}>
-                        <ProfilePicture commentId={comment.id}></ProfilePicture>
+                    <Grid item md={2}>
+                        <ProfilePicture commentId={id}></ProfilePicture>
                     </Grid>
-                    <Grid item xs md={11} className={classes.comment}>
+                    <Grid item xs md={10} className={classes.comment}>
                         <CommentDetail commentDetails={comment}></CommentDetail>
                     </Grid>
                 </Grid>
